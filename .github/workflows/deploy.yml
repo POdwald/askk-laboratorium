@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-        - 'devops-with-docker/part3/example-app/**'
+        - 'devops-with-docker/part3/express-app/**'
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: devops-with-docker/part3/example-app
+        working-directory: devops-with-docker/part3/express-app
 
     steps:
       # Check out the code
@@ -31,6 +31,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: devops-with-docker/part3/example-app
+          context: devops-with-docker/part3/express-app
           push: true
-          tags: your-dockerhub-username/example-app:latest
+          tags: your-dockerhub-username/express-app:latest
