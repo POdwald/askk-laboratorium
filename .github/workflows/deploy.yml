@@ -33,4 +33,4 @@ jobs:
         with:
           context: devops-with-docker/part3/express-app
           push: true
-          tags: your-dockerhub-username/express-app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/express-app:latest
